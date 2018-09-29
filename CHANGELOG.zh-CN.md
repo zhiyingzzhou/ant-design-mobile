@@ -1,5 +1,5 @@
 ---
-order: 3
+order: 2
 title: 更新日志
 timeline: true
 toc: false
@@ -14,6 +14,258 @@ toc: false
 * 主版本号：含有破坏性更新和新特性，不在发布周期内。
 
 ---
+
+### 2.2.4
+
+`2018-09-06`
+- **Feature**
+
+  - 🌟 `InputItem` 支持自定义金额虚拟键盘头部内容([#2820](https://github.com/ant-design/ant-design-mobile/pull/2820))
+  - 🌟 `PickerView` data属性支持传入一维数组([#2815](https://github.com/ant-design/ant-design-mobile/pull/2815))
+
+- **Bug Fix**
+
+  - 🐞 `Popup` 修复 popup 在 iPhoneX 底部安全区域问题 [#2810](https://github.com/ant-design/ant-design-mobile/pull/2810)
+  - 🐞 `Button` 修复 `inline` 和 `icon` 同时设定时的样式错误 [#2822](https://github.com/ant-design/ant-design-mobile/pull/2822)
+  - 🐞 `TextareaItem` 修复 ios 文字长度计算的错误 [#2825](https://github.com/ant-design/ant-design-mobile/pull/2825)
+
+### 2.2.3
+
+`2018-08-09`
+- **Feature**
+
+  - 🌟 `ImagePicker` 支持自定义数量([#2700](https://github.com/ant-design/ant-design-mobile/pull/2700))
+  - 🌟 `Picker` label属性支持传入ReactNode([#2720](https://github.com/ant-design/ant-design-mobile/pull/2720))
+
+- **Enhancement**
+
+  - 📝 更新`DatePicker`文档 ([#2657](https://github.com/ant-design/ant-design-mobile/pull/2657))
+
+### 2.2.2
+
+`2018-07-12`
+- **Feature**
+
+  - 🌟 `Tabs` 无障碍模式优化 [PR](https://github.com/react-component/m-tabs/pull/25)
+  - 🌟 `ImagePicker` 支持自定义每行的元素个数 [#2619](https://github.com/ant-design/ant-design-mobile/issues/2619) [#2668](https://github.com/ant-design/ant-design-mobile/issues/2668)
+- **Bug Fix**
+
+  - 🐞 `Picker` 修复传入的值含有`undefined`时，最终获取值的错误问题 [#2695](https://github.com/react-component/m-cascader/pull/18)
+  - 🐞 `Flex` 修复`direction=column`时，组件样式错位的问题 [#2683](https://github.com/ant-design/ant-design-mobile/pull/2711)
+
+### 2.2.1
+
+`2018-06-27`
+
+- **Feature**
+
+  - 🌟 `TabBar` 增加`tabBarPosition` [#2564](https://github.com/ant-design/ant-design-mobile/pull/2564)
+  - 🌟 `Menu` & `PullToRefresh`支持国际化 [#2669](https://github.com/ant-design/ant-design-mobile/pull/2669)
+
+- **Bug Fix**
+
+  - 🐞 `Picker` 在`wrap`和`mask`元素上增加`translateZ`属性 [#2653](https://github.com/ant-design/ant-design-mobile/pull/2653)
+  - 🐞 `Tabs` 修复WebView上的`underline`渲染报错 [#2674](https://github.com/ant-design/ant-design-mobile/pull/2674)
+  - 🐞 `PopOver` 修复未引入fastclick时，点击popover 遮罩层不触发onVisibleChange的BUG [#2659](https://github.com/ant-design/ant-design-mobile/issues/2659)
+  - 🐞 `Calendar` 修复日历组件在某些情况下的报错 [#2655](https://github.com/ant-design/ant-design-mobile/issues/2655)
+
+- **Enhancement**
+
+  - 📝 升级Jest版本 [#2657](https://github.com/ant-design/ant-design-mobile/pull/2657)
+
+### 2.2.0
+
+`2018-06-15`
+
+注意：根据之前的 [2.1.x 最后版本计划](https://github.com/ant-design/ant-design-mobile/issues/2556)，我们已经分离 react native 组件代码到单独的 [ant-design-mobile-rn](https://github.com/ant-design/ant-design-mobile-rn) 仓库，并且已经发布了 `antd-mobile-rn` 包。如果使用 react native 组件，请这样修改 `package.json` 文件：
+
+```diff
+  ...
+  "dependencies": {
+-   "antd-mobile": "^2.1.11",
++   "antd-mobile-rn": "^2.2.0",
+    "react": "16.3.1",
+    ...
+  },
+  ...
+```
+
+然后，重装 node_modules 即可。
+
+- **Feature**
+
+  - 🌟 新增 `prerenderingSiblingsNumber` 属性给 `TabBar` ([#2607](https://github.com/ant-design/ant-design-mobile/pull/2607))
+  - 🌟 完善 ssr 支持 ([#2605](https://github.com/ant-design/ant-design-mobile/issues/2605))
+
+- **Bug Fix**
+
+  - 🐞 修复 `Popover` ts 类型错误 ([#2571](https://github.com/ant-design/ant-design-mobile/issues/2571))
+
+- **Enhancement**
+
+  - 📝 更新 `Stepper` API 文档 ([#2573](https://github.com/ant-design/ant-design-mobile/issues/2573))
+  - 增强测试
+
+### 2.1.11
+
+`2018-05-31`
+
+- **Bug Fix**
+
+  - 🐞 修复 `InputItem` 的 unknown-prop 提示 ([#2565](https://github.com/ant-design/ant-design-mobile/pull/2565) [#2601](https://github.com/ant-design/ant-design-mobile/issues/2601))
+  - 🐞 修复 `Steps` 可能包含 null 子元素问题 ([#2329](https://github.com/ant-design/ant-design-mobile/issues/2329))
+  - 🐞 RN: 修复 `Modal` 按钮垂直对齐问题 ([#2325](https://github.com/ant-design/ant-design-mobile/pull/2325))
+  - 🐞 RN: 修复 `NoticeBar` 动画问题 ([#2267](https://github.com/ant-design/ant-design-mobile/issues/2267))
+  - 🐞 RN: 修复 `SearchBar` 样式覆盖问题 ([#2593](https://github.com/ant-design/ant-design-mobile/issues/2593))
+
+- **Enhancement**
+
+  - 📝 RN: 提示将拆分出单独的 `antd-mobile-rn` 包 ([#2556](https://github.com/ant-design/ant-design-mobile/issues/2556))
+  - 📝 工作流: 新增自动锁定 issue 的脚本 ([86fb0787e9e13754](https://github.com/ant-design/ant-design-mobile/commit/86fb0787e9e137548ef03517e1ca9fa2e061ceaa))
+  - 📝 示例: 更新 `Card` `TextareaItem` `PullToRefresh` `Picker` 组件示例
+
+### 2.1.10
+
+`2018-05-24`
+
+- **Feature**
+
+  - 🌟 RN `InputItem` 支持自定义 `focus` 属性 ([#2408](https://github.com/ant-design/ant-design-mobile/pull/2408))
+  - 🌟 RN `InputItem` android下增加清除按钮([#2358](https://github.com/ant-design/ant-design-mobile/pull/2358))
+
+
+- **Bug Fix**
+
+  - 🐞 修复 `InputItem` 数字键盘无障碍模式焦点穿透问题([#2568](https://github.com/ant-design/ant-design-mobile/pull/2568))
+  - 🐞 修复 `Modal` 弹窗输入框无法聚焦问题([#2177](https://github.com/ant-design/ant-design-mobile/issues/2177))
+  - 🐞 修复RN `DatePicker` `month` 模式下取值错误问题([#0a701](https://github.com/ant-design/ant-design-mobile/commit/0a701dd205c636804f7e63d7b7d3a2283aad293b))
+  - 🐞 修复RN `InputItem` 下 `type` 为 `phone`类型输入字符不为数字问题([#4ab82](https://github.com/ant-design/ant-design-mobile/commit/4ab82fadc55268cef8558f0423d5ba2f6e4b38d5))
+
+
+- **Enhancement**
+
+  - 📝 更新 RN `Icon` 使用文档
+  - 📝 更新 RN `Picker` 文档, 增加 `onVisibleChange` 自定义属性
+  - 📝 更新 RN `Range` 使用文档
+  - 📝 更新 RN `LocaleProvider` 使用文档
+
+### 2.1.9
+
+`2018-05-21`
+
+- **Feature**
+
+  - 🌟 `InputItem` 支持自定义 `onVirtualKeyboardConfirm` 属性, 提供虚拟键盘确认按钮回调([#2551](https://github.com/ant-design/ant-design-mobile/pull/2551))
+  - 🌟 `InputItem` 支持自定义 `moneyKeyboardWrapProps` 属性, 以解决虚拟键盘点透问题([#2550](https://github.com/ant-design/ant-design-mobile/pull/2550))
+  - 🌟 [React Native] `InputItem` 在RN下支持 `focus` 回调 ([#2381](https://github.com/ant-design/ant-design-mobile/issues/2381))
+  - 🌟 多语言支持Russian language ([#2400](https://github.com/ant-design/ant-design-mobile/pull/2400))
+
+
+- **Bug Fix**
+
+  - 🐞 修复 `TextareaItem`、`InputItem` 设置 `clear` 属性清除内容无效问题([#2372](https://github.com/ant-design/ant-design-mobile/issues/2372))
+  - 🐞 修复 `TabBar` 嵌套 `SearchBar` 样式异常问题([#2447](https://github.com/ant-design/ant-design-mobile/issues/2447))
+  - 🐞 修复 `InputItem` 在 `money` 类型下默认值设置问题([#2493](https://github.com/ant-design/ant-design-mobile/issues/2493))
+  - 🐞 修复 `Accordion` 组件在Android上读不出展开折叠状态问题([#2491](https://github.com/ant-design/ant-design-mobile/issues/2491))
+  - 🐞 修复 `InputItem` 在 `bankCard` 类型下，在UC浏览器光标错位问题([#2441](https://github.com/ant-design/ant-design-mobile/issues/2441))
+  - 🐞 修复 `Modal` 弹窗无法关闭的问题([#2486](https://github.com/ant-design/ant-design-mobile/issues/2486))
+  - 🐞 修复 `Picker`、`SearchBar` 多语言支持问题 ([#2502](https://github.com/ant-design/ant-design-mobile/issues/2502))
+  - 🐞 修复 `InputItem` 在 `money` 类型下，虚拟键盘无障碍化问题([#2419](https://github.com/ant-design/ant-design-mobile/issues/2419)、[#2418](https://github.com/ant-design/ant-design-mobile/issues/2418))
+  - 🐞 修复组件类型定义 ([5a2d0d](https://github.com/ant-design/ant-design-mobile/commit/5a2d0d57a796ca739cb22306d48377ea5a2c27c3))
+
+
+- **Enhancement**
+
+  - 📝 更新 `Carousel` 使用文档([#2434](https://github.com/ant-design/ant-design-mobile/issues/2434))
+  - 📝 更新 `Progress` api 文档
+  - 📝 更新 `LocaleProvider` 使用文档
+  - 📝 增加 `tabbar` 中内嵌使用 `ListView` 使用文档
+  - 📝 变更依赖 `rc-drawer` 为 `rmc-drawer` ([3fd1a5d](https://github.com/ant-design/ant-design-mobile/commit/3fd1a5d97273d32195da0a863ecc81b32e2b0d07))
+
+### 2.1.8
+
+`2018-03-19`
+
+
+- **Bug Fix**
+
+  - 🐞  修复 `InputItem[type="money"]` onChange 回调参数格式改变的 bug。([#2403](https://github.com/ant-design/ant-design-mobile/pull/2403))
+
+### 2.1.7
+
+`2018-03-16`
+
+
+- **Bug Fix**
+
+  - 🐞  修复 `Grid` 无边框。
+  - 🐞  修复 `Modal.prompt` onPress 返回 promise 的问题。([#2243](https://github.com/ant-design/ant-design-mobile/pull/2243))
+  - 🐞  修复 `ImagePicker` 在删除后再添加抛异常的问题。([#2302](https://github.com/ant-design/ant-design-mobile/pull/2302))
+  - 🐞  修复 `Carousel` `autoplayInterval` 的使用问题。([#2369](https://github.com/ant-design/ant-design-mobile/issues/2369))
+  - 🐞  修复 RN `Modal.Alert` 内容不居中的问题。([#2347](https://github.com/ant-design/ant-design-mobile/pull/2347))
+
+- **Enhancement**
+
+  - 📝  重构并完善所有 TypeScript 类型定义 [#2323](https://github.com/ant-design/ant-design-mobile/pull/2323)。
+  - 📝  增加自定义 `Tabs` 个数的 [Demo](https://github.com/ant-design/ant-design-mobile/commit/e210a6db81af48d2e0aa1881c4a192ca4a10dfb2)。
+
+### 2.1.6
+
+`2018-02-05`
+
+
+- **Bug Fix**
+
+  - 🐞  修复 `Modal.prompt` 无法输入的问题。
+
+
+### 2.1.5
+
+`2018-01-29`
+
+- **Feature**
+
+  - 🌟 `ImagePicker` 支持自定义 `accept` 属性。([#2269](https://github.com/ant-design/ant-design-mobile/pull/2269))
+
+- **Bug Fix**
+
+  - 🐞  修复 `InputItem` 在 ios 11 上 focus 时被键盘遮盖的问题。([#2289](https://github.com/ant-design/ant-design-mobile/pull/2289))
+  - 🐞  修复 `Menu` 确定按钮遮盖内容列表的问题。([#2273](https://github.com/ant-design/ant-design-mobile/issues/2273))
+  - 🐞  修复 `Progress` tsd。([#2292](https://github.com/ant-design/ant-design-mobile/issues/2292))
+  - 🐞  [React Native] 修复 `TextareaItem` 多余的左间距。([#2260](https://github.com/ant-design/ant-design-mobile/pull/2260))
+
+
+- **Enhancement**
+
+  - 📝 修复 [Picker](https://github.com/ant-design/ant-design-mobile/issues/2291), [DatePicker, Calendar](https://github.com/ant-design/ant-design-mobile/issues/2282) 文档。
+
+### 2.1.4
+
+`2018-01-23`
+
+- **Bug Fix**
+
+  - 修复: Modal defaultValue 问题 ([#2221](https://github.com/ant-design/ant-design-mobile/pull/2221))
+  - 修复: Modal 关闭事件问题 ([#1975](https://github.com/ant-design/ant-design-mobile/pull/1975))
+  - 修复: TextArea 样式问题
+  - 修复: DatePicker/Picker 值缓存问题
+  - 修复: InputItem 报错 ([#2220](https://github.com/ant-design/ant-design-mobile/pull/2220))
+
+### 2.1.3
+
+`2017-12-29`
+
+2018 新年快乐 🎉
+
+- **Enhancement**
+
+  - 发布新网站
+  - 优化 InputItem 文档
+
+- **Bug Fix**
+
+  - 修复: 给 DatePicker 添加默认的 date 支持
+  - 修复: 删除冗余的 Modal 代码
 
 ### 2.1.2
 

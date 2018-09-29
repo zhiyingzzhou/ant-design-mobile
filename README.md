@@ -18,13 +18,10 @@ English | [简体中文](./README.zh-CN.md)
 
 A configurable Mobile UI specification and React-based implementation.
 
-[中文 README](README.zh-CN.md)
-
 ## Features
 
 - Follow Ant Design Mobile UI specification.
 - Configurable UI style for different products.
-- Support web and native usages based on React Native.
 - Develop in TypeScript.
 
 ## Demo
@@ -34,12 +31,6 @@ A configurable Mobile UI specification and React-based implementation.
 <img width="250" src="https://zos.alipayobjects.com/rmsportal/dLMGiKuyFLBfYfm.png" />
 
 http://mobile.ant.design/kitchen-sink/
-
-### react native demo
-
-<img width="250" src="https://user-images.githubusercontent.com/1698185/27175806-f0a8a7f0-51f2-11e7-85fb-4b7ea9f89e5b.png" />
-
-install expo app: https://expo.io/tools
 
 ## Install & Usage
 

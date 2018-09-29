@@ -9,4 +9,6 @@ export interface ImagePickerPropTypes {
   onFail?: (msg: string) => void;
   selectable?: boolean;
   multiple?: boolean;
+  accept?: string;
+  length?: number | string;
 }

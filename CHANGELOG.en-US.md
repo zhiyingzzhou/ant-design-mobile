@@ -1,12 +1,11 @@
 ---
-order: 3
+order: 2
 title: Change Log
 timeline: true
 toc: false
 ---
 
 `antd-mobile` strictly follows [Semantic Versioning 2.0.0](http://semver.org/).
-
 
 #### Release Schedule
 
@@ -15,6 +14,257 @@ toc: false
 * Major version release is not included in this schedule for breadking change and new features.
 
 ---
+
+### 2.2.4
+
+`2018-09-06`
+- **Feature**
+
+  - 🌟 `InputItem` add `moneyKeyboardHeader` property([#2820](https://github.com/ant-design/ant-design-mobile/pull/2820))
+  - 🌟 `PickerView` accept one-dimensional array as data property([#2815](https://github.com/ant-design/ant-design-mobile/pull/2815))
+
+- **Bug Fix**
+
+  - 🐞 `Popup` Popup should be compatible with bottom safe area [#2810](https://github.com/ant-design/ant-design-mobile/pull/2810)
+  - 🐞 `Button` fix button with icon and inline style [#2822](https://github.com/ant-design/ant-design-mobile/pull/2822)
+  - 🐞 `TextareaItem` fix line break cause by textareaItem word count corrupt for iOS  [#2825](https://github.com/ant-design/ant-design-mobile/pull/2825)
+
+### 2.2.3
+
+`2018-08-09`
+- **Feature**
+
+  - 🌟 `ImagePicker` support customized length ([#2700](https://github.com/ant-design/ant-design-mobile/pull/2700))
+  - 🌟 `Picker` support using label prop with ReactNode ([#2720](https://github.com/ant-design/ant-design-mobile/pull/2720))
+
+- **Enhancement**
+
+  - 📝 更新`DatePicker`文档 ([#2657](https://github.com/ant-design/ant-design-mobile/pull/2657))
+
+### 2.2.2
+
+`2018-07-12`
+- **Feature**
+
+  - 🌟 `Tabs`: support Barrier Free Access [PR](https://github.com/react-component/m-tabs/pull/25)
+  - 🌟 `ImagePicker`: support customized length [#2619](https://github.com/ant-design/ant-design-mobile/issues/2619) [#2668](https://github.com/ant-design/ant-design-mobile/issues/2668)
+- **Bug Fix**
+
+  - 🐞 `Picker`: fix get wrong value when `prop.value` has `undefined` [#2695](https://github.com/react-component/m-cascader/pull/18)
+  - 🐞 `Flex`: fix style when `direction=column`  [#2683](https://github.com/ant-design/ant-design-mobile/pull/2711)
+
+### 2.2.1
+
+`2018-06-27`
+
+- **Feature**
+
+  - 🌟 `TabBar` add tabBarPosition on TabBar [#2564](https://github.com/ant-design/ant-design-mobile/pull/2564)
+  - 🌟 `Menu` & `PullToRefresh` support locale [#2669](https://github.com/ant-design/ant-design-mobile/pull/2669)
+
+- **Bug Fix**
+
+  - 🐞 `Picker` add translateZ on wrap and mask [#2653](https://github.com/ant-design/ant-design-mobile/pull/2653)
+  - 🐞 `Tabs` fix underline render error on some webview [#2674](https://github.com/ant-design/ant-design-mobile/pull/2674)
+  - 🐞 `PopOver` (iOS) fix event onVisibleChange not trigger when click mask [#2659](https://github.com/ant-design/ant-design-mobile/issues/2659)
+  - 🐞 `Calendar` fix error [#2655](https://github.com/ant-design/ant-design-mobile/issues/2655)
+
+- **Enhancement**
+
+  - 📝 Update Jest [#2657](https://github.com/ant-design/ant-design-mobile/pull/2657)
+
+### 2.2.0
+
+`2018-06-15`
+
+Note: According to the previous [2.1.x final version plan](https://github.com/ant-design/ant-design-mobile/issues/2556), we have separated the react native components into a separate [ant-design-mobile-rn](https://github.com/ant-design/ant-design-mobile-rn) repo, and the `antd-mobile-rn` npm package has been released. If you use the react native components, modify your `package.json` file like so:
+
+```diff
+  ...
+  "dependencies": {
+-   "antd-mobile": "^2.1.11",
++   "antd-mobile-rn": "^2.2.0",
+    "react": "16.3.1",
+    ...
+  },
+  ...
+```
+
+Then reinstall node_modules.
+
+- **Feature**
+
+  - 🌟 add `prerenderingSiblingsNumber` prop for `TabBar` ([#2607](https://github.com/ant-design/ant-design-mobile/pull/2607))
+  - 🌟 add ssr support ([#2605](https://github.com/ant-design/ant-design-mobile/issues/2605))
+
+- **Bug Fix**
+
+  - 🐞 Fix `Popover` ts type ([#2571](https://github.com/ant-design/ant-design-mobile/issues/2571))
+
+- **Enhancement**
+
+  - 📝 Update `Stepper` API doc ([#2573](https://github.com/ant-design/ant-design-mobile/issues/2573))
+  - Improve test
+
+### 2.1.11
+
+`2018-05-31`
+
+- **Bug Fix**
+
+  - 🐞 Fix `InputItem`'s unknown-prop warning ([#2565](https://github.com/ant-design/ant-design-mobile/pull/2565) [#2601](https://github.com/ant-design/ant-design-mobile/issues/2601))
+  - 🐞 Fix `Steps` may have null children ([#2329](https://github.com/ant-design/ant-design-mobile/issues/2329))
+  - 🐞 RN: fix `Modal` footer button vertical alignment ([#2325](https://github.com/ant-design/ant-design-mobile/pull/2325))
+  - 🐞 RN: fix `NoticeBar` Animate ([#2267](https://github.com/ant-design/ant-design-mobile/issues/2267))
+  - 🐞 RN: fix `SearchBar` style ([#2593](https://github.com/ant-design/ant-design-mobile/issues/2593))
+
+- **Enhancement**
+
+  - 📝 RN: add a hint of `antd-mobile-rn` package ([#2556](https://github.com/ant-design/ant-design-mobile/issues/2556))
+  - 📝 Workflow: add lock-issue script ([86fb0787e9e13754](https://github.com/ant-design/ant-design-mobile/commit/86fb0787e9e137548ef03517e1ca9fa2e061ceaa))
+  - 📝 Demo: update `Card` `TextareaItem` `PullToRefresh` `Picker` demo
+
+### 2.1.10
+
+`2018-05-24`
+
+- **Feature**
+
+  - 🌟 RN `InputItem` add custom `focus` prop ([#2408](https://github.com/ant-design/ant-design-mobile/pull/2408))
+  - 🌟 RN `InputItem` add clear button for android([#2358](https://github.com/ant-design/ant-design-mobile/pull/2358))
+
+
+- **Bug Fix**
+
+  - 🐞 Fix `InputItem` error focus in aria mode([#2568](https://github.com/ant-design/ant-design-mobile/pull/2568))
+  - 🐞 Fix input embeded `Modal` can not focus ([#2177](https://github.com/ant-design/ant-design-mobile/issues/2177))
+  - 🐞 Fix RN `DatePicker` mode month([#0a701](https://github.com/ant-design/ant-design-mobile/commit/0a701dd205c636804f7e63d7b7d3a2283aad293b))
+  - 🐞 Fix RN `InputItem` error input content on the type of `phone`([#4ab82](https://github.com/ant-design/ant-design-mobile/commit/4ab82fadc55268cef8558f0423d5ba2f6e4b38d5))
+
+
+- **Enhancement**
+
+  - 📝 Update RN `Icon` demo
+  - 📝 Update RN `Picker` docs, add `onVisibleChange` prop
+  - 📝 Update RN `Range` demo
+  - 📝 Update RN `LocaleProvider` demo
+
+### 2.1.9
+
+`2018-05-21`
+
+- **Feature**
+
+  - 🌟 `InputItem` add custom `onVirtualKeyboardConfirm` prop, supporting confirm callback of virtual keyboard([#2551](https://github.com/ant-design/ant-design-mobile/pull/2551))
+  - 🌟 `InputItem` add custom `moneyKeyboardWrapProps` prop, by which can solve the click penetrate problem ([#2550](https://github.com/ant-design/ant-design-mobile/pull/2550))
+  - 🌟 [React Native] support focus callback for `InputItem` under React Native ([#2381](https://github.com/ant-design/ant-design-mobile/issues/2381))
+  - 🌟 support Russian language ([#2400](https://github.com/ant-design/ant-design-mobile/pull/2400))
+
+
+- **Bug Fix**
+
+  - 🐞 Fix `TextareaItem`、`InputItem` invalid `clear` prop([#2372](https://github.com/ant-design/ant-design-mobile/issues/2372))
+  - 🐞 Fix `SearchBar` appear error style when using with `TabBar`([#2447](https://github.com/ant-design/ant-design-mobile/issues/2447))
+  - 🐞 Fix `InputItem` can not delete the default value when defaultValue or value is number on the type of `money` ([#2493](https://github.com/ant-design/ant-design-mobile/issues/2493))
+  - 🐞 Fix `Accordion` can not read expand and folding status in Preact under talkback mode in Android ([#2491](https://github.com/ant-design/ant-design-mobile/issues/2491))
+  - 🐞 Fix `InputItem` misplaced cursor in UC Browser on the type of `bankCard`([#2441](https://github.com/ant-design/ant-design-mobile/issues/2441))
+  - 🐞 Fix `Modal` can not close ([#2486](https://github.com/ant-design/ant-design-mobile/issues/2486))
+  - 🐞 Fix `Picker`、`SearchBar` I18n ([#2502](https://github.com/ant-design/ant-design-mobile/issues/2502))
+  - 🐞 Fix `InputItem` aria support when using virtual keyboard([#2419](https://github.com/ant-design/ant-design-mobile/issues/2419), [#2418](https://github.com/ant-design/ant-design-mobile/issues/2418))
+  - 🐞 Fix component definition ([5a2d0d](https://github.com/ant-design/ant-design-mobile/commit/5a2d0d57a796ca739cb22306d48377ea5a2c27c3))
+
+
+- **Enhancement**
+
+  - 📝 Update `Carousel` demo([#2434](https://github.com/ant-design/ant-design-mobile/issues/2434))
+  - 📝 Update `Progress` api docs
+  - 📝 Update `LocaleProvider` demo
+  - 📝 Add `tabbar` using with `ListView` demo
+  - 📝 change the dep of `rc-drawer` to `rmc-drawer` ([3fd1a5d](https://github.com/ant-design/ant-design-mobile/commit/3fd1a5d97273d32195da0a863ecc81b32e2b0d07)
+
+### 2.1.8
+
+`2018-03-19`
+
+
+- **Bug Fix**
+
+  - 🐞  Fix `InputItem[type="money"]` onChange handler arguments change from value to event object. ([#2403](https://github.com/ant-design/ant-design-mobile/pull/2403))
+
+
+### 2.1.7
+
+`2018-03-16`
+
+
+- **Bug Fix**
+
+  - 🐞  Fix `Grid` no border usage.
+  - 🐞  Fix `Modal.prompt` onPress return promise. ([#2243](https://github.com/ant-design/ant-design-mobile/pull/2243))
+  - 🐞  Fix `ImagePicker` throw Error when readd pic after delete。([#2302](https://github.com/ant-design/ant-design-mobile/pull/2302))
+  - 🐞  Fix `Carousel` `autoplayInterval` usage. ([#2369](https://github.com/ant-design/ant-design-mobile/issues/2369))
+  - 🐞  Fix RN `Modal.Alert` content not align center. ([#2347](https://github.com/ant-design/ant-design-mobile/pull/2347))
+
+- **Enhancement**
+
+  - 📝  Refactor all TypeScript Interface definition. [#2323](https://github.com/ant-design/ant-design-mobile/pull/2323)。
+  - 📝  Add [Demo](https://github.com/ant-design/ant-design-mobile/commit/e210a6db81af48d2e0aa1881c4a192ca4a10dfb2) about custom `Tabs` page number.
+
+### 2.1.6
+
+`2018-02-05`
+
+
+- **Bug Fix**
+
+  - 🐞  Fix `Modal.prompt` can not input.
+### 2.1.5
+
+`2018-01-29`
+
+- **Feature**
+
+  - 🌟 `ImagePicker` support custom `accept`.([#2269](https://github.com/ant-design/ant-design-mobile/pull/2269))
+
+- **Bug Fix**
+
+  - 🐞  Fix `InputItem` be cover by keyboard in ios 11. ([#2289](https://github.com/ant-design/ant-design-mobile/pull/2289))
+  - 🐞  Fix `Menu` be content be coverd by confim button.([#2273](https://github.com/ant-design/ant-design-mobile/issues/2273))
+  - 🐞  Fix `Progress` tsd。([#2292](https://github.com/ant-design/ant-design-mobile/issues/2292))
+  - 🐞  [React Native] Fix `TextareaItem` extra margin left.([#2260](https://github.com/ant-design/ant-design-mobile/pull/2260))
+
+
+- **Enhancement**
+
+  - 📝  Fix [Picker](https://github.com/ant-design/ant-design-mobile/issues/2291), [DatePicker, Calendar](https://github.com/ant-design/ant-design-mobile/issues/2282) doc.
+
+### 2.1.4
+
+`2018-01-23`
+
+- **Bug Fix**
+
+  - Fix: Modal defaultValue problem. ([#2221](https://github.com/ant-design/ant-design-mobile/pull/2221))
+  - Fix: Modal click event not correctly. ([#1975](https://github.com/ant-design/ant-design-mobile/pull/1975))
+  - Fix: TextArea styles.
+  - Fix: DatePicker/Picker value cache problem.
+  - Fix: InputItem error. ([#2220](https://github.com/ant-design/ant-design-mobile/pull/2220))
+
+### 2.1.3
+
+`2017-12-29`
+
+Happy new year 2018 🎉
+
+- **Enhancement**
+
+  - New website.
+  - Improve InputItem doc.
+
+- **Bug Fix**
+
+  - Fix: Add defaultDate for DatePicker.
+  - Fix: Delete redundant Modal code.
 
 ### 2.1.2
 

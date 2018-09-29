@@ -1,26 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const createPortal = (ReactDOM as any).createPortal;
+const createPortal = ReactDOM.createPortal;
+export interface PortalProps {
+  getContainer: () => Element;
+}
+export default class Portal extends React.Component<PortalProps, any> {
+  container: Element;
 
-export default class Portal extends React.Component<{
-  getContainer: Function;
-}, any> {
-
-  _container: any;
-
-  constructor(props) {
+  constructor(props: PortalProps) {
     super(props);
-    this._container = this.props.getContainer();
-  }
-
-  shouldComponentUpdate() {
-    return false;
+    this.container = this.props.getContainer();
   }
 
   render() {
     if (this.props.children) {
-      return createPortal(this.props.children, this._container);
+      return createPortal(this.props.children, this.container);
     }
     return null as any;
   }

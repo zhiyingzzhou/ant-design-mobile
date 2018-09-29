@@ -95,10 +95,10 @@ module.exports = {
     useHD: process.env.HD_ENV === 'hd',
   },
   themeConfig: {
-    siteTitle: 'ANT DESIGN MOBILE',
+    siteTitle: 'Ant Design Mobile',
     siteSubTitle: '支付宝移动端组件库',
     indexDemos: ['drawer'], // for kitchen 这些组件每个 demo 都需要全屏展示，首页直接放其各个 demo 链接
-    subListDemos: ['list-view', 'pull-to-refresh'], // for kitchen 这些组件每个 demo 都需要全屏展示，首页直接放其各个 demo 链接
+    subListDemos: ['list-view', 'pull-to-refresh', 'tab-bar'], // for kitchen 这些组件每个 demo 都需要全屏展示，首页直接放其各个 demo 链接
     hashSpliter: '-demo-', // for kitchen URL 中记录到 hash 里的特殊标记
     categoryOrder: [
       'Layout',
@@ -126,5 +126,8 @@ module.exports = {
       '0.9.x': 'http://09x.mobile.ant.design',
       '1.x': 'http://1x.mobile.ant.design',
     },
+  },
+  devServerConfig: {
+    disableHostCheck: true,
   },
 };

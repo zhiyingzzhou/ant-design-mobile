@@ -1,9 +1,11 @@
-import Pagination from '../pagination/locale/sv_Se';
-import DatePicker from '../date-picker/locale/sv_Se';
-import DatePickerView from '../date-picker-view/locale/sv_Se';
-import InputItem from '../input-item/locale/sv_Se';
-import Picker from '../picker/locale/sv_Se';
-import SearchBar from '../search-bar/locale/sv_Se';
+import DatePickerView from '../date-picker-view/locale/sv_SE';
+import DatePicker from '../date-picker/locale/sv_SE';
+import InputItem from '../input-item/locale/sv_SE';
+import Pagination from '../pagination/locale/sv_SE';
+import Picker from '../picker/locale/sv_SE';
+import SearchBar from '../search-bar/locale/sv_SE';
+import Menu from '../menu/locale/sv_SE';
+import PullToRefresh from '../pull-to-refresh/locale/sv_SE';
 
 export default {
   locale: 'sv',
@@ -13,4 +15,6 @@ export default {
   InputItem,
   Picker,
   SearchBar,
+  Menu,
+  PullToRefresh,
 };

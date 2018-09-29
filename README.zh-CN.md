@@ -18,13 +18,10 @@
 
 Ant Design 移动端设计规范。`antd-mobile` 是 Ant Design 的移动规范的 React 实现，服务于蚂蚁及口碑无线业务。
 
-[README in English](README.md)
-
 ## 特性
 
 - 基于 Ant Design 移动设计规范。
 - 规则化的视觉样式配置，适应各类产品风格。
-- 基于 React Native 的多平台支持。
 - 使用 TypeScript 开发，提供类型定义文件。
 
 ## 演示
@@ -34,12 +31,6 @@ Ant Design 移动端设计规范。`antd-mobile` 是 Ant Design 的移动规范�
 <img width="250" src="https://zos.alipayobjects.com/rmsportal/dLMGiKuyFLBfYfm.png" />
 
 http://mobile.ant.design/kitchen-sink/
-
-### react native demo
-
-<img width="250" src="https://user-images.githubusercontent.com/1698185/27175806-f0a8a7f0-51f2-11e7-85fb-4b7ea9f89e5b.png" />
-
-请先安装 expo app： https://expo.io/tools
 
 ## 安装 & 使用
 
@@ -53,6 +44,7 @@ http://mobile.ant.design/kitchen-sink/
 ## 链接
 
 - [首页](http://mobile.ant.design)
+- [国内镜像站点 🇨🇳](https://antd-mobile.gitee.io)
 - [开发文档](development.zh-CN.md)
 - [底层 React 模块](http://github.com/react-component)
 - [官方 Demo 集合](https://github.com/ant-design/antd-mobile-samples)

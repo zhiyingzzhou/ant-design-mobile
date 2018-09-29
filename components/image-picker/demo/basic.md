@@ -47,7 +47,7 @@ class ImagePickerExample extends React.Component {
           files={files}
           onChange={this.onChange}
           onImageClick={(index, fs) => console.log(index, fs)}
-          selectable={files.length < 5}
+          selectable={files.length < 7}
           multiple={this.state.multiple}
         />
       </WingBlank>
